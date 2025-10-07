@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="card p-4">
-            <h1 class="text-center mb-4">коддинг кал</h1>
+            <h1 class="text-center mb-4">Генератор паролей</h1>
             <form method="post">
                 <div class="mb-3">
                     <label for="complexity" class="form-label">Выберите уровень сложности:</label>
@@ -22,8 +22,15 @@
                         <option value="Очень Сложный">Очень Сложный</option>
                     </select>
                 </div>
+
+                <div class="mb-3">
+                    <label for="length" class="form-label">Длина пароля (необязательно):</label>
+                    <input type="number" class="form-control" id="length" name="length" min="4" max="128" placeholder="Например: 12">
+                </div>
+
                 <button type="submit" class="btn btn-primary w-100">Сгенерировать пароль</button>
             </form>
+
             {% if password %}
                 <div class="alert alert-success mt-3" role="alert">
                     Сгенерированный пароль: <strong>{{ password }}</strong>
